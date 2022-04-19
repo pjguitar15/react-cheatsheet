@@ -1,5 +1,5 @@
 ### Basic Boiler Plate
-```React
+```react
 export constn Header = () => {
   return (
     <div>
