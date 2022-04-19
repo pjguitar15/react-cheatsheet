@@ -15,3 +15,21 @@ npx create-react-app my-app
 cd my-app
 npm start
 ```
+
+### React Snippets
+```
+rafce // generates arrow function component
+```
+
+### Props
+```javascript
+<Header title='Hello' /> // from another component
+
+const Header = (props) => {
+  return(
+    <div>
+      <h1>{props.title}</h1>
+    </div>
+  )
+}
+```
