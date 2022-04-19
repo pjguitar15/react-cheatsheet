@@ -1,6 +1,6 @@
 ### Basic Boiler Plate
-```react
-export constn Header = () => {
+```reactjs
+export const Header = () => {
   return (
     <div>
       <h1>My Header</h1>
