@@ -37,6 +37,7 @@ import { Link } from 'react-router-dom'
 
 ### useNavigate
 > used if you want to add a button functionality that redirects to another page
+> 
 > example: submit a form then goes to another page 
 ```javascript
 import { useNavigate } from 'react-router-dom'
