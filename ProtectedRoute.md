@@ -1,34 +1,36 @@
 ### App.js
 ```javascript
 import ProtectedRoute from './ProtectedRoute'
-import Profile from './Profile'
 
-const App = () => {
-  const [isAuth, setIsAuth] = useState(false)
-
+const App = () => {  
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<><button>Login</button><button>Logout</button></>} />
-      </Routes>
-      <ProtectedRoute path='/profile' element={<Profile />} isAuth={isAuth} />
+        <Route path='/' element={<SignIn />} />
+        <Route element={<ProtectedRoute />}>
+          // these are the outlet components
+          <Route path='/home' element={<Home />} />
+          <Route path='/account' element={<Account />} />
+        </Route>
+      </Routes>      
     </Router>
   );
 };
 ```
 
 ### ProtectedRoute.js
+> Outlet allows nested routes
 ```javascript
-import { Route, Redirect } from 'react-router-dom'
+import { Outlet } from 'react-router'
 
-const ProtectedRoute = ({ isAuth: isAuth, component: Component, ...rest }) => {
-  return <Route {...rest} render={(props) => {
-    if (isAuth) {
-      return <Component />
-    } else {
-      return <Redirect to={{pathname: '/', state: { from: props.location }}} />
-    }
-  }} />
+const useAuth = () => {
+  const user = { loggedIn: false }
+  return user && user.loggedIn
+}
+
+const ProtectedRoute = () => {
+  const isAuth = useAuth()
+  return isAuth ? <Outlet /> : <SignIn />
 }
 ```
 
