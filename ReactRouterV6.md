@@ -28,9 +28,9 @@ const App = () => {
 > this is used for navbars only
 ```javascript
 import { Link } from 'react-router-dom'
-<Link to'/'>Home</Link>
-<Link to'/about'>About</Link>
-<Link to'/profile'>Profile</Link>
+<Link to='/'>Home</Link>
+<Link to='/about'>About</Link>
+<Link to='/profile'>Profile</Link>
 ````
 
 ### useNavigate
