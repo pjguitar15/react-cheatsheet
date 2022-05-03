@@ -1,44 +1,45 @@
-### ProtectedRoute.js
-```javascript
-const ProtectedRoute = ({ user, children }) => {
-  if (!user) {
-    return <Navigate to="/landing" replace />;
-  }
-
-  return children;
-};
-```
-
 ### App.js
 ```javascript
+import ProtectedRoute from './ProtectedRoute'
+import Profile from './Profile'
+
 const App = () => {
-  ...
+  const [isAuth, setIsAuth] = useState(false)
 
   return (
-    <>
-      ...
-
+    <Router>
       <Routes>
-        <Route index element={<Landing />} />
-        <Route path="landing" element={<Landing />} />
-        <Route
-          path="home"
-          element={
-            <ProtectedRoute user={user}>
-              <Home />
-            </ProtectedRoute>
-          }
-        />
-        ...
+        <Route path='/' element={<><button>Login</button><button>Logout</button></>} />
       </Routes>
-    </>
+      <ProtectedRoute path='/profile' element={<Profile />} isAuth={isAuth} />
+    </Router>
   );
 };
 ```
 
-### Home.js
+### ProtectedRoute.js
 ```javascript
-const Home = () => {
-  return <h2>Home (Protected: authenticated user required)</h2>;
+  const ProtectedRoute = ({ isAuth: isAuth, component: Component, ...rest }) => {
+    return <Route {...rest} render={(props) => {
+      if (isAuth) {
+        return <Component />
+      } else {
+        return <Redirect to={{pathname: '/', state: { from: props.location }}} />
+      }
+    }} />
+  }
+```
+
+
+```
+
+### Profile.js
+> this can only be accessed by authorized user
+```javascript
+import { withRouter } from 'react-router-dom'
+const Profile = () => {
+  return <div>If you see this, it means you are authenticated.</div>;
 };
+
+export default withRouter(Profile)
 ```
