@@ -30,9 +30,6 @@ const App = () => {
   }
 ```
 
-
-```
-
 ### Profile.js
 > this can only be accessed by authorized user
 ```javascript
