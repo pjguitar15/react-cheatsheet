@@ -26,6 +26,7 @@ const App = () => {
 
 ### Link
 > this is used for navbars only
+
 > to remove style, just use style={{ textDecoration: 'none' }}
 ```javascript
 import { Link } from 'react-router-dom'
