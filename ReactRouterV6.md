@@ -38,25 +38,15 @@ import { Link } from 'react-router-dom'
 > example: submit a form then goes to another page 
 ```javascript
 import { useNavigate } from 'react-router-dom'
-const navigate = useNavigate()
+let navigate = useNavigate()
 <button onClick={() => {navigate('/about')}}>Go to About</button>
 ````
 ### useParams
 ```javascript
+<Route path='/profile/:username' element={<Profile />}></Route>
 
-````
-
-### Use State
-```javascript
-
-````
-
-### Use State
-```javascript
-
-````
-
-### Use State
-```javascript
-
+// Profile.js
+import { useParams } from 'react-router-dom'
+let { username } = useParams()
+<div>This is {username}'s profile page</div>
 ````
