@@ -9,5 +9,7 @@ const changeNavbarBackground = () => {
     setNavbar(false)
   }
 }
+
 <Navbar className={`${navbar ? 'bg-white' : 'bg-none'}`}>
+</Navbar>
 ```
