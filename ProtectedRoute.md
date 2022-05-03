@@ -21,7 +21,7 @@ const App = () => {
 ### ProtectedRoute.js
 > Outlet allows nested routes
 ```javascript
-import { Outlet } from 'react-router'
+import { Navigate, Outlet } from 'react-router'
 
 const useAuth = () => {
   const user = { loggedIn: false }
@@ -30,17 +30,6 @@ const useAuth = () => {
 
 const ProtectedRoute = () => {
   const isAuth = useAuth()
-  return isAuth ? <Outlet /> : <SignIn />
+  return isAuth ? <Outlet /> : <Navigate to='/' />
 }
-```
-
-### Profile.js
-> this can only be accessed by authorized user
-```javascript
-import { withRouter } from 'react-router-dom'
-const Profile = () => {
-  return <div>If you see this, it means you are authenticated.</div>;
-};
-
-export default withRouter(Profile)
 ```
