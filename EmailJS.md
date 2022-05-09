@@ -24,10 +24,14 @@ import emailjs from 'emailjs-com'
 
 ### Send email function
 ```javascript
+// we're gonna use useRef to target the form
+import React, { useRef } from 'react';
+const form = useRef();
+
 const sendEmail = (e) => {
   e.preventDefault()
   
-  emailjs.sendForm('gmail', 'template_name', e.target, 'YOUR_USER_ID')
+  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
   .then((result) => {
     console.log(result.text)
   }, (error) => {
@@ -39,7 +43,7 @@ const sendEmail = (e) => {
 
 ### Form HTML
 ```javascript
-<form onSubmit={sendEmail}>
+<form ref={form} onSubmit={sendEmail}>
   <input name='name' />
 </form>
 ```
