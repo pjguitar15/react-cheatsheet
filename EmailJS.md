@@ -48,3 +48,10 @@ const sendEmail = (e) => {
 </form>
 ```
 
+### Solution to: Gmail_API: Request had insufficient authentication scopes
+- go to EmailJS dashboard -> Services
+- click on the Gmail service in your list
+- reconnect your account
+- Please click on the checkbox "Send email on your behalf" to allow us to send the emails through your Gmail account
+- The new Gmail access popup leaves all permissions disabled by default.
+
