@@ -37,7 +37,6 @@ const sendEmail = (e) => {
   }, (error) => {
     console.log(error.text)
   })
-  e.target.reset()
 }
 ```
 
