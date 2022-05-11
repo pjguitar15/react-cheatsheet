@@ -3,6 +3,13 @@
 setList([...list, {item: 'hello'}])
 ```
 
+### Read
+```javascript
+data.map((item, index) => (
+    <div key={index}>{item.title}</div>
+))
+```
+
 ### Delete
 ```javascript
 const deleteTodo = (id) => {
@@ -11,7 +18,7 @@ const deleteTodo = (id) => {
 }
 ```
 
-### Edit
+### Update
 ```javascript
 
 ```
