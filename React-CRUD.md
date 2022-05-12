@@ -11,6 +11,7 @@ data.map((item, index) => (
 ```
 
 ### Delete
+> This should be handled inside the todo item!
 ```javascript
 const deleteTodo = () => {
     setData(data.filter(item => item.id !== selectedId))
@@ -18,6 +19,7 @@ const deleteTodo = () => {
 ```
 
 ### Update
+> This should be handled inside the todo item!
 ```javascript
     setData(data.map(item => {
         if(item.id === data.id){
