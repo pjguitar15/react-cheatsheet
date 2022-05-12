@@ -24,9 +24,9 @@ const deleteTodo = () => {
     setData(data.map(item => {
         if(item.id === data.id){
             return {
-                ...item, completed: !item.completed // use return statement to change the value inside map
+                ...item, completed: !item.completed // change the value and returns the new updated value 
             }            
         }
-        return item // only returns when the if condition didn't match
+        return item // returns the rest of the items
     }))    
 ```
