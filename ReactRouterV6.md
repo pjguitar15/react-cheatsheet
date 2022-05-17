@@ -53,3 +53,10 @@ import { useParams } from 'react-router-dom'
 let { username } = useParams()
 <div>This is {username}'s profile page</div>
 ````
+
+### useLocation
+```javascript
+import { useLocation } from 'react-router-dom'
+const location = useLocation();
+console. log(location.pathname);
+```
