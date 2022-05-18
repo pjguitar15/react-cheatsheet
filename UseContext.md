@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <!--   Inside this context provider, you can provide all the global variables needed  -->
+        {/* Inside this context provider, you can provide all the global variables needed */}
         <ContextProvider> 
           <Routes>
             <Route path='/' element={<LoginPage />} />            
