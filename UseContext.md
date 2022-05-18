@@ -35,3 +35,10 @@ function App() {
 
 export default App;
 ```
+
+### How to use
+> just import useAuth, and now you can take any variable from there
+```javascript
+import { useAuth } from './AuthProvider'
+const { test } = useAuth()
+```
