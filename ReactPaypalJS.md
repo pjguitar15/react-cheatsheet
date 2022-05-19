@@ -35,3 +35,13 @@ import { PaypalScriptProvider } from '@paypal/react-paypal-js'
 2. Make sure your in the Sandbox
 3. Select Default Application
 4. You can now see the client id
+
+### Adding Paypal Button Component to ReactJS
+```javascript
+import { PaypalButtons } from '@paypal/react-paypal-js'
+
+return <PaypalButtons />
+```
+
+### Paypal Buttons Style
+https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
