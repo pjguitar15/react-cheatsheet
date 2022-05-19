@@ -61,6 +61,15 @@ return (
 
       handleApprove(data.orderID);
     }}
+    
+    onError={(err) => {
+      // you can use alert components to handle alerts
+      console.error("PayPal Checkout onError", err);
+    }}
+    
+    onCancel={() => {
+      // Display cancel message, modal or redirect user to cancel page or back to cart
+    }}
   />  
 (
 ```
@@ -95,6 +104,12 @@ style={{
   shape: "pill"
 }}
 ```
+
+### Simulate Payment
+1. Go to Sanbox > Accounts
+2. Get the credentials for the personal account
+3. Click view/edit account and now you can see the email and its system generated password
+4. You will use those credentials to sign in and pay
 
 ### Paypal Buttons Style
 https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
