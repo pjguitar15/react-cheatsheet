@@ -67,6 +67,7 @@ return (
 
 ### Handle Approve
 ```javascript
+const [paidFor, setPaidFor] = useState(false)
 const handleApprove = (orderId) => {
   // Call backend function to fulfill order
 
@@ -76,6 +77,11 @@ const handleApprove = (orderId) => {
 
   // if response is error
   // alert("Your payment was processed successfully. However, we are unable to fulfill your purchase. Please contact us at support@designcode.io for assistance.");
+  
+  if (paidFor) {
+    // Display success message, modal or redirect user to success page
+    alert("Thank you for your purchase!");
+  }
 };
 ```
 
