@@ -40,8 +40,58 @@ import { PaypalScriptProvider } from '@paypal/react-paypal-js'
 ```javascript
 import { PaypalButtons } from '@paypal/react-paypal-js'
 
-return <PaypalButtons />
+return (
+  <PaypalButtons 
+    createOrder={(data, actions) => {
+      return actions.order.create({
+        purchase_units: [
+          {
+            description: product.description,
+            amount: {
+              value: product.price
+            }
+          }
+        ]
+      });
+    }}
+    
+    onApprove={async (data, actions) => {
+      const order = await actions.order.capture(); 
+      console.log("order", order);
+
+      handleApprove(data.orderID);
+    }}
+  />  
+(
+```
+
+### Handle Approve
+```javascript
+const handleApprove = (orderId) => {
+  // Call backend function to fulfill order
+
+  // if response is success
+  setPaidFor(true);
+  // Refresh user's account or subscription status
+
+  // if response is error
+  // alert("Your payment was processed successfully. However, we are unable to fulfill your purchase. Please contact us at support@designcode.io for assistance.");
+};
+```
+
+### Button Styling
+```javascript
+style={{
+  color: "silver",
+  layout: "horizontal",
+  height: 48,
+  tagline: false,
+  shape: "pill"
+}}
 ```
 
 ### Paypal Buttons Style
 https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
+
+### Paypal Events
+https://paypal.github.io/react-paypal-js/?path=/docs/example-paypalbuttons--default
