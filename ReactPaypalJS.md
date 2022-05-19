@@ -31,3 +31,7 @@ import { PaypalScriptProvider } from '@paypal/react-paypal-js'
 ```
 
 ### How to get the client id
+1. Go to My Apps & Credentials
+2. Make sure your in the Sandbox
+3. Select Default Application
+4. You can now see the client id
