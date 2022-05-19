@@ -10,7 +10,7 @@ npm install @paypal/react-paypal-js
 1. Login to Business Dashboard
 2. Go to Sandbox > Accounts
 3. You can see the both business and personal accounts are already generated
-4. 
+
 
 ### Import to ReactJS
 ```javascript
@@ -21,7 +21,7 @@ import { PaypalScriptProvider } from '@paypal/react-paypal-js'
 > you would put in before the routers
 ```javascript
 // this is where you put your client id of the paypal developer account
-<PaypalScriptProvider options={{ 'client-id': '' }}>
+<PaypalScriptProvider options={{ 'client-id': process.env.REACT_APP_PAYPAL_CLIENT_ID }}>
   <Router>
     <Routes>
       <Route />
