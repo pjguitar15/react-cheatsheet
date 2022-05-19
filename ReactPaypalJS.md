@@ -110,6 +110,7 @@ style={{
 2. Get the credentials for the personal account
 3. Click view/edit account and now you can see the email and its system generated password
 4. You will use those credentials to sign in and pay
+5. Go to sandbox.paypal.com to check the transaction history
 
 ### PayPal Buttons Style
 https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
