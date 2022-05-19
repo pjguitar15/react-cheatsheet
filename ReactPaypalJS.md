@@ -14,20 +14,20 @@ npm install @paypal/react-paypal-js
 
 ### Import to ReactJS
 ```javascript
-import { PaypalScriptProvider } from '@paypal/react-paypal-js'
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 ```
 
 ### Add to App.js
 > you would put in before the routers
 ```javascript
 // this is where you put your client id of the paypal developer account
-<PaypalScriptProvider options={{ 'client-id': process.env.REACT_APP_PAYPAL_CLIENT_ID }}>
+<PayPalScriptProvider options={{ 'client-id': process.env.REACT_APP_PAYPAL_CLIENT_ID }}>
   <Router>
     <Routes>
       <Route />
     </Routes>
   </Router>
-</PaypalScriptProvider>
+</PayPalScriptProvider>
 ```
 
 ### How to get the client id
@@ -38,10 +38,10 @@ import { PaypalScriptProvider } from '@paypal/react-paypal-js'
 
 ### Adding Paypal Button Component to ReactJS
 ```javascript
-import { PaypalButtons } from '@paypal/react-paypal-js'
+import { PayPalButtons } from '@paypal/react-paypal-js'
 
 return (
-  <PaypalButtons 
+  <PayPalButtons 
     createOrder={(data, actions) => {
       return actions.order.create({
         purchase_units: [
@@ -111,7 +111,7 @@ style={{
 3. Click view/edit account and now you can see the email and its system generated password
 4. You will use those credentials to sign in and pay
 
-### Paypal Buttons Style
+### PayPal Buttons Style
 https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
 
 ### Paypal Events
