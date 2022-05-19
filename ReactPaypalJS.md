@@ -116,3 +116,8 @@ https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guid
 
 ### Paypal Events
 https://paypal.github.io/react-paypal-js/?path=/docs/example-paypalbuttons--default
+
+---
+
+# Source
+https://designcode.io/advanced-react-hooks-handbook-paypal-checkout
