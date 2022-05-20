@@ -1,3 +1,5 @@
+### Code example
+```javascript
 import React, { useState } from 'react'
 import '../pages/styles/Home.css'
 
@@ -35,3 +37,4 @@ const PillButton = (props) => {
 }
 
 export default PillButton
+```
