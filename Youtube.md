@@ -1,66 +1,35 @@
-### Install react-youtube
+### Install react-player
 ```bash
 npm install react-youtube
 ```
 
-### Install get-youtube-id
-```bash
-npm install get-youtube-id
-```
-
-### How to use get-youtube-id
+### Youtube links only to react-player
 ```javascript
-var getYouTubeID = require('get-youtube-id');
- 
-var id = getYouTubeID("http://www.youtube.com/watch?v=9bZkp7q19f0");
-console.log(id); // "9bZkp7q19f0"
- 
- 
-// Or, if you're using ES6 syntax:
-import getYouTubeID from 'get-youtube-id';
+import React from 'react'
+import ReactPlayer from 'react-player/youtube'
+
+// Only loads the YouTube player
+<ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
 ```
 
-### How to use react-youtube
+### How to use react-player
+> for any video links
 ```javascript
-import React from 'react';
-import YouTube from 'react-youtube';
+import ReactPlayer from 'react-player'
 
-class Example extends React.Component {
-  render() {
-    const opts = {
-      height: '390',
-      width: '640',
-      playerVars: {
-        // https://developers.google.com/youtube/player_parameters
-        autoplay: 1,
-      },
-    };
-
-    return <YouTube videoId="2g811Eo7K8U" opts={opts} onReady={this._onReady} />;
-  }
-
-  _onReady(event) {
-    // access to player in all event handlers via event.target
-    event.target.pauseVideo();
-  }
-}
-
-<YouTube
-  videoId={string}                  // defaults -> ''
-  id={string}                       // defaults -> ''
-  className={string}                // defaults -> ''
-  iframeClassName={string}          // defaults -> ''
-  style={object}                    // defaults -> {}
-  title={string}                    // defaults -> ''
-  loading={string}                  // defaults -> undefined
-  opts={obj}                        // defaults -> {}
-  onReady={func}                    // defaults -> noop
-  onPlay={func}                     // defaults -> noop
-  onPause={func}                    // defaults -> noop
-  onEnd={func}                      // defaults -> noop
-  onError={func}                    // defaults -> noop
-  onStateChange={func}              // defaults -> noop
-  onPlaybackRateChange={func}       // defaults -> noop
-  onPlaybackQualityChange={func}    // defaults -> noop
-/>
+// Render a YouTube video player
+<ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
 ```
+
+### Lazy
+> to lazy load the appropriate player for the url you pass in
+```javascript
+import React from 'react'
+import ReactPlayer from 'react-player/lazy'
+
+// Lazy load the YouTube player
+<ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
+```
+
+# Source
+https://www.npmjs.com/package/react-player
