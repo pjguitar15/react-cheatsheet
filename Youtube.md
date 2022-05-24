@@ -1,6 +1,6 @@
 ### Install react-player
 ```bash
-npm install react-youtube
+npm install react-player
 ```
 
 ### Youtube links only to react-player
