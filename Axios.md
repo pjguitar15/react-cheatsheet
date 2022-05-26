@@ -1,5 +1,10 @@
 # How to send http request using Axios
 
+### Installing Axios
+```bash
+npm install axios --save
+```
+
 ### Get request using Axios example
 ```javascript
 axios.get(`https://jsonplaceholder.typicode.com/users`)
@@ -25,4 +30,12 @@ axios.delete(`https://jsonplaceholder.typicode.com/users/${this.state.id}`)
   console.log(res);
   console.log(res.data);
 })
+```
+
+### Put request
+```javascript
+const res = await axios.put('/api/article/123', {
+    title: 'Making PUT Requests with Axios',
+    status: 'published'
+});
 ```
