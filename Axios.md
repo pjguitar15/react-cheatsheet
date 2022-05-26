@@ -5,6 +5,11 @@
 npm install axios --save
 ```
 
+### Import to project
+```javascript
+import axios from 'axios'
+```
+
 ### Get request using Axios example
 ```javascript
 axios.get(`https://jsonplaceholder.typicode.com/users`)
