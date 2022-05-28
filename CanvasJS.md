@@ -2,6 +2,11 @@
 
 ### Install
 ```bash
+npm install canvasjs-react-charts
+```
+
+### Import
+```jasvascript
 import { CanvasJSChart } from "canvasjs-react-charts";
 ```
 
