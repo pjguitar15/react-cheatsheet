@@ -22,3 +22,8 @@ useEffect(() => {
   }
 }, [windowDimension])
 ```
+
+### Sample Usage
+```javascript
+const test = windowDimension.winWidth < 990 ? 'bg-black' : ''
+```
