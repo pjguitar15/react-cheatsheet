@@ -1,5 +1,6 @@
 # Use this to redirect your website back
 
+```
 ErrorDocument 404 /index.html
 RewriteEngine On
 RewriteCond %{HTTP_HOST} !^www\.
@@ -10,4 +11,5 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} iltp\.org [NC]
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://iltp.org/$1 [R,L]
+```
 
