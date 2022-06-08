@@ -6,6 +6,8 @@ const AuthContext = React.createContext()
 export const useAuth = () => {
   return useContext(AuthContext)
 }
+
+// don't forget the export!
 export const ContextProvider = ({ children }) => {
   const test = 'This is a variable from useContext'
   const value = {
