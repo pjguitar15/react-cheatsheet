@@ -4,5 +4,4 @@ useEffect(() => {
   window.scrollTo(0, 0)
 }, [location])
 
-window.addEventListener('scroll', scrollListener)
 ```
