@@ -1,7 +1,7 @@
 # Face Detection with Face Api
 
-### Example Codde
-```reactjs
+### Example Code
+```react
 import React, { useState, useEffect, useRef } from 'react'
 import * as faceapi from 'face-api.js'
 
