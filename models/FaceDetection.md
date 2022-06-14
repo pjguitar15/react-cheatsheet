@@ -1,5 +1,10 @@
 # Face Detection with Face Api
 
+### Installation
+```bash
+npm install face-api.js
+```
+
 ### Example Code
 ```javascript
 import React, { useState, useEffect, useRef } from 'react'
